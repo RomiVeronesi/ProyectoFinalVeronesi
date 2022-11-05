@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Estilos/Style.css">
+    <script src="https://kit.fontawesome.com/4516737a48.js" crossorigin="anonymous"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <header class="header">
+    <nav  class="navbar">
+        <a href="#Inicio">Inicio</a>
+        <a href="#Nosotros">Nosotros</a>
+        <a href="#Recomendados">Recomendados</a>
+        <a href="#NuestrosClientes">Nuestros Clientes</a>
+        <a href="#Contacto">Contacto</a>
+    </nav>
+
+    
+    <div>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </div>
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+
+</header>
+
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Los viajes en el tiempo se hacen a través de los sabores</h3>
+        <p>Viví la experiencia que te ofrecemos</p>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>Nosotros</span></h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="./Imagenes/huynh-quyet-UsT3o22hElI-unsplash.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>¿Qué hace especial a nuestra Vinoteca?</h3>
+            <p>Nuestro indomable espíritu aventurero, la inmensa pasión que sentimos por los vinos y esa curiosidad natural que todo ser humano posee, fueron los principales factores que nos llevaron a buscar terruños diferentes dentro de esta hermosa y gran Argentina.</p>
+            <p>Esta búsqueda dio como resultado descubrir la belleza natural, la calidez de su gente y la rica historia vitivinícola que poseen los suelos Argentinos, de los cuales nos enamoramos a primera vista y ya no hubo vuelta atrás…</p>
+            <p>Así nació “LA CEPA DE VINOS”, una empresa dedicada 100% a la difusión, comercialización y distribución de vinos, espumantes y delicatesen elaborados en las provincias argentinas</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+<h1 class="heading"> <span>Recomendados</span></h1>
+
+
+<main id="contenedor-productos">
+
+</main>
+
+<div class="modal-contenedor">
+    <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor">
+            <!-- <div class="productoEnCarrito">
+                <p>Buzo 1</p>
+                <p>Precio: $1200</p>
+                <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+            </div> -->
+        </div>
+        <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+        <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+    </div>
+</div>
+
+
+
+<section class="review" id="review">
+
+    <h1 class="heading"> <span>Nuestros Clientes</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Gran variedad de etiquetas, destacándose la amplia selección de malbecs. Originales y prácticos accesorios para mantener la calidad del vino y lucirse en una velada especial con amigos o la pareja.</p>
+            <img src="./Imagenes/Clientes/Cliente 1.jpg" class="user" alt="">
+            <h3>Paula</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Compramos varios vinos , de diferentes marcas , muy bien recomendados por quienes están a cargo del negocio, con gran cordialidad y buenos consejos. Nos invitaron a probar un vino exquisito! Los precios son muy buenos!</p>
+            <img src="./Imagenes/Clientes/Cliente 2.jpg" class="user" alt="">
+            <h3>Jesús</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="images/quote-img.png" alt="" class="quote">
+            <p>Muy buena opción para conocer un poco más de vinos.Y para llevárselos también! Muy buena atención y buenas recomendaciones.Definitivamente ha sido mi cepa favorita, y me encanta poder disfrutarla.</p>
+            <img src="./Imagenes/Clientes/Cliente3.jpg" class="user" alt="">
+            <h3>Débora</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>Contacto</span> </h1>
+
+    <div class="row">
+
+        <form action="">
+            <h3>Formulario</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" placeholder="Teléfono">
+            </div>
+            <input type="submit" value="Contactar" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- footer -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#Inicio">Inicio</a>
+        <a href="#Nosotros">Nosotros</a>
+        <a href="#Recomendados">Recomendados</a>
+        <a href="#NuestrosClientes">Nuestros Clientes</a>
+        <a href="#Contacto">Contacto</a>   
+    </div>
+
+    <div class="credit"> <span>© 2022 Todos los Derechos Reservados</span> | La Cepa</div>
+
+</section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./data.json"></script>
+    <script src="./scripts2.js"></script>
+    <script src="./modal.js"></script>
+</body>
+</html>

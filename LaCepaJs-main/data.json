@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "nombre": "Vino Blanco Canciller Raices Torrontes",
+      "precio": 780,
+      "cantidad": 1,
+      "img": "./Imagenes/Blanco/Canciller_Raices_Torrontes.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Vino Rosado Estancia Mendoza Malbec",
+      "precio": 1020,
+      "cantidad": 1,
+      "img": "./Imagenes/Rosado/Estancia_Mendoza_Malbec_Rose.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Vino Tinto Canciller Reserva Malbec",
+      "precio": 820,
+      "cantidad": 1,
+      "img": "./Imagenes/Tinto/Canciller_Reserva_Malbec.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Vino Blanco Canciller Reserva Chardonnay",
+      "precio": 720,
+      "cantidad": 1,
+      "img": "./Imagenes/Blanco/Canciller_Reserva_Chardonnay.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Vino Rosado Simona Estate",
+      "precio": 750,
+      "cantidad": 1,
+      "img": "./Imagenes/Rosado/Simona_Estate_Rosado.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Vino Tinto Los Helechos Malbec",
+      "precio": 520,
+      "cantidad": 1,
+      "img": "./Imagenes/Tinto/Los_Helechos_Malbec.jpg"
+    }
+  
+  ]
