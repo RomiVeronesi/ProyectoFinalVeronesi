@@ -9,6 +9,60 @@
     <title>Inicio</title>
 </head>
 <body>
+  <script>
+
+        function eliminarDelCarrito   (prodId) {
+            const item = carrito.find((prod) => prod.id === prodId)
+            const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
+            carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos
+            // un elemento
+            actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE
+            //MODIFICA EL CARRITO
+            //ALERT SWEETALERT
+            Toast.fire({
+                icon: 'warning',
+                title: 'Eliminastes este producto'
+            })
+
+
+
+
+}
+ function actualizarCarrito ()  {
+    //LOS APPENDS SE VAN ACUMULANDO CON LO QE HABIA ANTES
+    contenedorCarrito.innerHTML = "" //Cada vez que yo llame a actualizarCarrito, lo primero q hago
+    //es borrar el nodo. Y despues recorro el array lo actualizo de nuevo y lo rellena con la info
+    //actualizado
+
+    //Por cada producto creamos un div con esta estructura y le hacemos un append al contenedorCarrito (el modal)
+    carrito.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio:$${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        `
+
+        contenedorCarrito.appendChild(div)
+
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+
+    })
+
+    contadorCarrito.innerText = carrito.length // actualizamos con la longitud del carrito.
+
+    console.log(carrito)
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+    //Por cada producto q recorro en mi carrito, al acumulador le suma la propiedad precio, con el acumulador
+    //empezando en 0.
+
+}
+
+
+
+ </script>
     <header class="header">
     <nav  class="navbar">
         <a href="#Inicio">Inicio</a>
@@ -18,7 +72,7 @@
         <a href="#Contacto">Contacto</a>
     </nav>
 
-    
+
     <div>
         <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
     </div>
@@ -126,7 +180,7 @@
                 <i class="fas fa-star-half-alt"></i>
             </div>
         </div>
-        
+
         <div class="box">
             <img src="images/quote-img.png" alt="" class="quote">
             <p>Muy buena opción para conocer un poco más de vinos.Y para llevárselos también! Muy buena atención y buenas recomendaciones.Definitivamente ha sido mi cepa favorita, y me encanta poder disfrutarla.</p>
@@ -192,7 +246,7 @@
         <a href="#Nosotros">Nosotros</a>
         <a href="#Recomendados">Recomendados</a>
         <a href="#NuestrosClientes">Nuestros Clientes</a>
-        <a href="#Contacto">Contacto</a>   
+        <a href="#Contacto">Contacto</a>
     </div>
 
     <div class="credit"> <span>© 2022 Todos los Derechos Reservados</span> | La Cepa</div>

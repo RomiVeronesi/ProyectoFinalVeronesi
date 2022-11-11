@@ -15,7 +15,6 @@ const cantidadTotal = document.getElementById('cantidadTotal');
 let carrito = []
 
 
-
 fetch('data.json')
 .then((resp) => resp.json())
 .then((info) => {
@@ -30,7 +29,7 @@ info.forEach((producto) => {
     <button id="agregar${producto.id}" class="boton-agregar">Agregar al carrito </button>
     `
     contenedorProductos.appendChild(div)
-    
+
     const boton = document.getElementById(`agregar${producto.id}`)
     //Por cada elemento de mi array, creo un div, lo cuelgo, le pongo un id particular, una vez colgado
     //le hago un get element by id (el de agregar) Obtengo el elemento y a dicho elemento le agregamos
@@ -73,33 +72,37 @@ const agregarAlCarrito = (prodId) => {
     }
     //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
     //el carrito y se ve.
-    actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
+    actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE
     //MODIFICA EL CARRITO
 }
 //agregarAlCarrito(1) //Le pasamos el ID por parametro. Tenemos que asigarle como evento esta funcion al boton
 //con el id de su producto correspondiente
 
 
-const eliminarDelCarrito = (prodId) => {
+function eliminarDelCarrito   (prodId) {
     const item = carrito.find((prod) => prod.id === prodId)
 
     const indice = carrito.indexOf(item) //Busca el elemento q yo le pase y nos devuelve su indice.
 
-    carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos 
-    // un elemento 
-    actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE 
+    carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos
+    // un elemento
+    actualizarCarrito() //LLAMAMOS A LA FUNCION QUE CREAMOS EN EL TERCER PASO. CADA VEZ Q SE
     //MODIFICA EL CARRITO
     //ALERT SWEETALERT
     Toast.fire({
     icon: 'warning',
-    title: 'Eliminastes este producto'
+    title: 'Eliminaste este producto'
   })
-    
+
+}
+
+function hola() {
+    console.log('HOLA');
 }
 
 
 const actualizarCarrito = () => {
-    
+
     //LOS APPENDS SE VAN ACUMULANDO CON LO QE HABIA ANTES
     contenedorCarrito.innerHTML = "" //Cada vez que yo llame a actualizarCarrito, lo primero q hago
     //es borrar el nodo. Y despues recorro el array lo actualizo de nuevo y lo rellena con la info
@@ -117,19 +120,20 @@ const actualizarCarrito = () => {
         `
 
         contenedorCarrito.appendChild(div)
-        
+
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
     })
-    
+
     contadorCarrito.innerText = carrito.length // actualizamos con la longitud del carrito.
-   
+
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     //Por cada producto q recorro en mi carrito, al acumulador le suma la propiedad precio, con el acumulador
     //empezando en 0.
 
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -140,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
-    
+
     Toast.fire({
     icon: 'info',
     title: 'El carrito se vació correctamente'
